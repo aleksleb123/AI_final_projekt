@@ -1,0 +1,38 @@
+[paths]
+mri_data = "Images_MRI_T1/"
+xls_data = 'LP_ADNIMERGE.csv'
+
+#CHANGE THESE BEFORE RUNNING
+model_output = "./saved_models"
+
+[training]
+device = 'cpu'
+runs = 5 # Number of models
+max_epochs = 20 # Epochs per model ORIGINALNO 50
+
+[dataset]
+excluded_ids = [91, 108, 268, 269, 272, 279, 293, 296, 307] # Invalid images to exclude from the dataset
+validation_split = 0.3 #Splits the dataset into the train and validation/test set, 50% each for validation and test
+#|---TEST---|---VALIDATION---|---TRAIN---|
+#|splt*0.5  | split*0.5      | 1-split   |
+
+[model]
+name = 'cnn-50x30' # Ensemble name - will be folder for saved ensemble
+image_channels = 1
+clin_data_channels = 2
+
+[hyperparameters]
+batch_size = 8 # ORIGINALNO 32
+learning_rate = 0.0003 #originalno 0.0001
+droprate = 0.3 #ORIGINALNO 0.4
+
+[operation]
+silent = false
+exclude_blank_ids = false # Determines if invalid IDs are excluded or not
+
+[ensemble]
+name = 'cnn-50x30'
+prune_threshold = 0.0 # Any models with accuracy below this threshold will be pruned, set to 0 to disable pruning
+individual_id = 1     # The id of the individual model to be used for the ensemble
+run_models = true    # If true, the ensemble will run the models to generate the predictions, otherwise will load from file
+excluded_ids = []     # List of data ids to be excluded from the ensemble
