@@ -1,4 +1,7 @@
-Navodila uporabe:
+Osnovna koda je tukaj:
+https://git0.fmf.uni-lj.si/nschense/alzheimers_nn/src/system-rewrite
+
+Navodila uporabe mojih sprememb:
   1. Downlodaj vse
   2. Jaz uporabljam PyCharm, kot vmesnik za python in imam vse v enem direktoriju izgleda kot je na sliki.<img width="666" height="551" alt="Izgled direktorija" src="https://github.com/user-attachments/assets/29d42d1c-3beb-4113-8b60-4ad5eaaa4fce" />
   3. Preimenuj "_.vscode" v ".vscode"
