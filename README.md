@@ -13,6 +13,7 @@ Navodila uporabe:
   5. Vse kar naredijo python files se bo shranil v folder, ki se bo sam naredil, "saved_models"
 
 Moj vrstni red poganjanja datotek:
+  0. Nastavitve se spreminja v config.toml. POZOR!! model se trenira DOLGO ČASA, jaz sem treniral 5 modelov 20 epoh 2-3 dni. 
   1. Train_cnn
   2. ensemble_predict
   3. threshold_xarray
