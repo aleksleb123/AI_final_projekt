@@ -11,7 +11,7 @@ Moj vrstni red poganjanja datotek:
   2. ensemble_predict
   3. threshold_xarray
   4. bayesian
-  5. sensitivity_analysis.py
+  5. sensitivity_analysis_fixed.py, (sensitivity_analysis, je stara verzija)
   6. xarray_sensitivity.py
   7. xarray_images.py
   8. threshold_refac.py
